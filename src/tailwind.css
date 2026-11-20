@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@source "./page.html";
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/source-sans-3/files/source-sans-3-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/source-serif-4/files/source-serif-4-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../node_modules/@fontsource/source-code-pro/files/source-code-pro-latin-400-normal.woff2") format("woff2");
+}
+
+@theme {
+  --color-ink: #221e1a;
+  --color-muted: #5e584f;
+  --color-line: #e3dcd2;
+  --color-paper: #f3efe6;
+  --color-card: #fffdf8;
+  --color-blue: #1a4b82;
+  --color-blue-dark: #143a66;
+  --color-danger: #9f1239;
+  --color-command: #241f1a;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Source Code Pro", ui-monospace, monospace;
+  --font-display: "Source Serif 4", Palatino, Georgia, serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply mt-3 flex min-h-12 w-full cursor-pointer items-center justify-center rounded-xl border-0 bg-blue px-4 text-center text-[1.0625rem] leading-tight font-semibold tracking-tight text-white shadow-[0_1px_1px_rgba(20,40,70,0.18)] hover:bg-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue;
+  }
+  .btn-quiet {
+    @apply mt-3 flex min-h-12 w-full cursor-pointer items-center justify-center rounded-xl border border-line bg-card px-4 text-center text-[1.0625rem] leading-tight font-semibold tracking-tight text-ink hover:bg-[#f4efe6] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue;
+  }
+  .panel {
+    @apply my-5 rounded-2xl border border-line bg-card p-5 shadow-[0_1px_2px_rgba(34,30,26,0.05)];
+  }
+  .command {
+    @apply my-3 overflow-x-auto rounded-xl bg-command px-4 py-3 font-mono text-[0.92rem] leading-normal text-[#f6f1e8];
+  }
+  .text-link {
+    @apply text-blue underline decoration-[#1a4b82]/40 underline-offset-2 hover:decoration-blue focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue;
+  }
+}
+
+[x-cloak] {
+  display: none !important;
+}

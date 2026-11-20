@@ -1,0 +1,27 @@
+{
+  "name": "animated-qr-reader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline page that reads an animated QR code and saves the file it contains.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "gifs": "node scripts/make-gifs.mjs",
+    "test": "node --test test/reader.test.mjs"
+  },
+  "dependencies": {
+    "alpinejs": "3.14.9",
+    "jsqr": "1.4.0",
+    "pako": "2.1.0"
+  },
+  "devDependencies": {
+    "@fontsource/source-code-pro": "5.3.1",
+    "@fontsource/source-sans-3": "5.3.1",
+    "@fontsource/source-serif-4": "5.3.1",
+    "@tailwindcss/cli": "4.3.5",
+    "gifenc": "1.0.3",
+    "qrcode": "1.5.4",
+    "tailwindcss": "4.3.5"
+  }
+}
